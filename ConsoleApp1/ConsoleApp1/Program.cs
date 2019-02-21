@@ -21,6 +21,7 @@ namespace ConsoleApp1
             //Console.WriteLine("Rješenje je zbroj 20 + 10 = "+ p.Add(p.A,p.b));
             //Console.ReadKey();
             Console.WriteLine("Ovo je moj prvi program");
+            Console.ReadLine();
         }
     
     }
