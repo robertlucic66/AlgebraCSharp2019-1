@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.2.7dodaj_broj2", "5.2.7do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.2.8prijestupna_godina", "5.2.8prijestupna_godina\5.2.8prijestupna_godina.csproj", "{1986F4D5-D66F-4647-964A-C0F585370F58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.2.9cjelobrojno_dijeljenje", "5.2.9cjelobrojno_dijeljenje\5.2.9cjelobrojno_dijeljenje.csproj", "{75DB3D00-EC4B-49ED-A400-2F82ABA6F11C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{1986F4D5-D66F-4647-964A-C0F585370F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1986F4D5-D66F-4647-964A-C0F585370F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1986F4D5-D66F-4647-964A-C0F585370F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75DB3D00-EC4B-49ED-A400-2F82ABA6F11C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75DB3D00-EC4B-49ED-A400-2F82ABA6F11C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75DB3D00-EC4B-49ED-A400-2F82ABA6F11C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75DB3D00-EC4B-49ED-A400-2F82ABA6F11C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,5 +157,6 @@ Global
 		{F08CB313-1428-4E99-A079-9F563C75B929} = {83925258-A7FF-4B3B-B547-71A4F832FC87}
 		{FCA814A5-51D1-4F8C-8711-CB63FC060C1B} = {83925258-A7FF-4B3B-B547-71A4F832FC87}
 		{1986F4D5-D66F-4647-964A-C0F585370F58} = {83925258-A7FF-4B3B-B547-71A4F832FC87}
+		{75DB3D00-EC4B-49ED-A400-2F82ABA6F11C} = {83925258-A7FF-4B3B-B547-71A4F832FC87}
 	EndGlobalSection
 EndGlobal
