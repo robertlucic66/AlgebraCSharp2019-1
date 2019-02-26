@@ -10,10 +10,12 @@ namespace _5._2._7dodaj_broj2
     {
         static void Main(string[] args)
         {
+           
+                Console.Write("Unesite cijeli broj: ");
+            int broj=0;
             try
             {
-                Console.Write("Unesite cijeli broj: ");
-            int broj = int.Parse(Console.ReadLine());
+                broj = int.Parse(Console.ReadLine());
             
                 if (broj % 4 == 0 && broj >= 100)
                 {
@@ -26,8 +28,9 @@ namespace _5._2._7dodaj_broj2
                
             }catch(Exception e)
             {
-                Console.Write("greška: " + e);
+                Console.Write("greška: " + e.ToString());
             }
+
             Console.ReadKey();
         }
     }
