@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.3.1.1primjer", "5.3.1.1pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petlja_primjeri_while", "Petlja_primjeri_while\Petlja_primjeri_while.csproj", "{C4B28FE6-9F7C-4F4F-B7F7-9A2DEC0E89B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.3.1neparni_brojevi_do20", "5.3.1neparni_brojevi_do20\5.3.1neparni_brojevi_do20.csproj", "{9600FACF-971B-49A5-8C09-80CEAEA0398B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +157,10 @@ Global
 		{C4B28FE6-9F7C-4F4F-B7F7-9A2DEC0E89B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4B28FE6-9F7C-4F4F-B7F7-9A2DEC0E89B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4B28FE6-9F7C-4F4F-B7F7-9A2DEC0E89B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9600FACF-971B-49A5-8C09-80CEAEA0398B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9600FACF-971B-49A5-8C09-80CEAEA0398B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9600FACF-971B-49A5-8C09-80CEAEA0398B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9600FACF-971B-49A5-8C09-80CEAEA0398B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -181,5 +187,6 @@ Global
 		{937DA192-E163-4EAF-91D1-EF7426219CFA} = {ADDABB52-DF7D-4273-A466-53F9102016BE}
 		{F62641A5-8533-407E-9BCA-4C7E6699B5D2} = {ADDABB52-DF7D-4273-A466-53F9102016BE}
 		{C4B28FE6-9F7C-4F4F-B7F7-9A2DEC0E89B3} = {ADDABB52-DF7D-4273-A466-53F9102016BE}
+		{9600FACF-971B-49A5-8C09-80CEAEA0398B} = {ADDABB52-DF7D-4273-A466-53F9102016BE}
 	EndGlobalSection
 EndGlobal
