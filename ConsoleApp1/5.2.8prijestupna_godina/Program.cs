@@ -10,11 +10,24 @@ namespace _5._2._8prijestupna_godina
     {
         static void Main(string[] args)
         {
-            Console.Write("Unesite godinu: ");
-            int broj = int.Parse(Console.ReadLine());
-            if((broj % 4 == 0 && (!(broj % 100 == 0))) || (broj % 400 == 0)){
-
+            try
+            {
+                Console.Write("Unesite godinu: ");
+                int broj = int.Parse(Console.ReadLine());
+                if ((broj % 4 == 0 && (!(broj % 100 == 0))) || (broj % 400 == 0))
+                {
+                    Console.WriteLine("Prijestupna");
+                }
+                else
+                {
+                    Console.WriteLine("Nije prijestupna godina");
+                }
+            }catch
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.WriteLine("Greška");
             }
+            Console.ReadKey();
         }
     }
 }
