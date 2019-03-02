@@ -10,6 +10,8 @@ namespace _5._3._9.djelitelji
     {
         static void Main(string[] args)
         {
+            // 5.3.9 Djelitelji
+            // Napišite program koji za uneseni prirodni broj ispisuje sve njegove djelitelje.
             Console.Write("Unesite prirodan broj: ");
             try
             {

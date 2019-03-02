@@ -10,6 +10,8 @@ namespace _5._3._11.savrseni_brojevi
     {
         static void Main(string[] args)
         {
+            // 5.3.11 Savršeni brojevi
+            // Napišite program koji ispisuje sve savršene brojeve iz intervala [1, 1000].
             Console.Write("Savršeni brojevi iz intervala [1, 1000] su: ");
             int djelitelji;
             for (int i = 1; i <= 1000; i++)
