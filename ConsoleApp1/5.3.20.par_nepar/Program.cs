@@ -4,45 +4,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _5._3._13.min_max
+namespace _5._3._20.par_nepar
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // 5.3.13 Min-Max
-            // Napišite program koji traži unos 10 prirodnih brojeva, a zatim ispisuje najmanji i najveći.
-            int max = int.MinValue;
-            int min = int.MaxValue;
-            int broj;
+            // 5.3.20 Par-nepar
+            /* Program koji traži unos prirodnih brojeva dok se ne unese 0, a zatim
+             * ispisuje koliko je bilo uneseno parnih, a koliko neparnih
+             * (0 na kraju se ne računa ni kao paran ni kao neparan) */
+            int brojParnih = 0;
+            int brojNeparnih = 0;
+            int broj = -1;
             try
             {
-                for (int i = 1; i <= 10; i++)
+                while (broj != 0)
                 {
-                    Console.WriteLine("Unesite {0}. broj: ", i.ToString());
+                    Console.Write("Unesite prirodan broj: ");
                     broj = int.Parse(Console.ReadLine());
-                    if (broj <= 0)
+                    if (broj < 0)
                     {
                         throw new PrirodanBrojException("UNESITE PRIRODAN BROJ!");
                     }
-                    if (broj > max)
+                    if (broj > 0 && broj % 2 == 0)
                     {
-                        max = broj;
+                        brojParnih++;
                     }
-                    if (broj < min)
+                    else
                     {
-                        min = broj;
+                        brojNeparnih++;
                     }
                 }
-                Console.Write("Najmanji broj je: {0} \nNajveći broj je: {1}", min, max);
-            }
-            catch (FormatException ex)
-            {
-                Console.WriteLine("Greška. Poruka: {0}", ex.ToString());
+
+                Console.WriteLine("Parnih: {0}", brojParnih.ToString());
+                Console.WriteLine("Neparnih: {0}", brojNeparnih.ToString());
             }
             catch (PrirodanBrojException ex)
             {
-                Console.WriteLine("Greška. Poruka: {0}", ex.ToString());
+                Console.WriteLine("Greška. Poruka: " + ex.ToString());
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Greška. Poruka: " + ex.ToString());
             }
             catch (Exception e)
             {
@@ -70,3 +74,4 @@ public class PrirodanBrojException : Exception
     {
     }
 }
+

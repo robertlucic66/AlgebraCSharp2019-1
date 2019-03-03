@@ -43,7 +43,6 @@ namespace _5._3._21.zavrsni_uspjeh
                         {
                             Console.WriteLine("Pogrešan unos!");
                         }
-
                     }
 
                     if (ocjena == "1")
@@ -73,6 +72,10 @@ namespace _5._3._21.zavrsni_uspjeh
             catch (PozitivanBrojException ex)
             {
                 Console.WriteLine("Greška. Poruka: {0}", ex.ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Greška. Poruka: " + e.ToString());
             }
 
             finally

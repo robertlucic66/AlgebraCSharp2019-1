@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _5._3._9.djelitelji
+namespace _5._3._10.savrsen_broj
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // 5.3.9 Djelitelji
-            // Napišite program koji za uneseni prirodni broj ispisuje sve njegove djelitelje.
+            // 5.3.10 Savršen broj
+            // Napišite program koji ispisuje je li uneseni broj savršen ili ne. 
             Console.Write("Unesite prirodan broj: ");
             try
             {
@@ -21,50 +21,58 @@ namespace _5._3._9.djelitelji
                     throw new PrirodanBrojException("UNESITE PRIRODAN BROJ!");
                 }
 
-                Console.WriteLine("Djelitelji broja {0} su: ", broj);
+                int zbrojDjelitelja = 0;
 
-                for (int i = 1; i <= broj; i++)
+                for (int i = 1; i < broj; i++)
                 {
                     if (broj % i == 0)
                     {
-                        Console.Write("{0}, ", i.ToString());
+                        zbrojDjelitelja += i;
                     }
                 }
 
+                if (broj == zbrojDjelitelja)
+                {
+                    Console.WriteLine("Unešeni broj je savršen.");
+                }
+                else
+                {
+                    Console.WriteLine("Unešeni broj nije savršen.");
+                }
             }
             catch (PrirodanBrojException ex)
             {
                 Console.WriteLine("Greška. Poruka: " + ex.ToString());
             }
-
             catch (FormatException ex)
             {
                 Console.WriteLine("Greška. Poruka: " + ex.ToString());
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Console.WriteLine("Greška. Poruka: " + e.ToString());
             }
-
             finally
             {
                 Console.ReadLine();
             }
+        }
     }
 }
 
-    public class PrirodanBrojException : Exception
+public class PrirodanBrojException : Exception
+{
+    public PrirodanBrojException()
     {
-        public PrirodanBrojException()
-        {
-        }
+    }
 
-        public PrirodanBrojException(string message) : base(message)
-        {
-        }
+    public PrirodanBrojException(string message) : base(message)
+    {
+    }
 
-        public PrirodanBrojException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
+    public PrirodanBrojException(string message, Exception innerException) : base(message, innerException)
+    {
     }
 }
+
+

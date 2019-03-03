@@ -13,9 +13,9 @@ namespace _5._3._19.suma
             // 5.3.19 Suma
             // Program koji traži unos prirodnih brojeva dok se ne unese 0, a onda ispisuje njihovu sumu.
             int suma = 0;
+            int broj = -1;
             try
             {
-                int broj = -1;
                 while (broj != 0)
                 {
                     Console.WriteLine("Unesite prirodan broj: ");
@@ -35,6 +35,10 @@ namespace _5._3._19.suma
             catch (FormatException ex)
             {
                 Console.WriteLine("Greška. Poruka: {0}", ex.ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Greška. Poruka: " + e.ToString());
             }
             finally
             {

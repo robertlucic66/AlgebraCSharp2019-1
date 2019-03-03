@@ -4,50 +4,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _5._3._13.min_max
+namespace _5._3._12.suma_i_prosjek
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // 5.3.13 Min-Max
-            // Napišite program koji traži unos 10 prirodnih brojeva, a zatim ispisuje najmanji i najveći.
-            int max = int.MinValue;
-            int min = int.MaxValue;
+            // 5.3.12 Suma i prosjek
+            // Napišite program koji traži unos 5 prirodnih brojeva, a zatim ispisuje njihovu sumu i prosjek
             int broj;
+            int suma = 0;
+            double prosjek;
+
             try
             {
-                for (int i = 1; i <= 10; i++)
+                for (int i = 1; i <= 5; i++)
                 {
-                    Console.WriteLine("Unesite {0}. broj: ", i.ToString());
+                    Console.Write("Unesite {0}. prirodni broj: ", i.ToString());
                     broj = int.Parse(Console.ReadLine());
                     if (broj <= 0)
                     {
                         throw new PrirodanBrojException("UNESITE PRIRODAN BROJ!");
                     }
-                    if (broj > max)
-                    {
-                        max = broj;
-                    }
-                    if (broj < min)
-                    {
-                        min = broj;
-                    }
+                    suma += broj;
                 }
-                Console.Write("Najmanji broj je: {0} \nNajveći broj je: {1}", min, max);
-            }
-            catch (FormatException ex)
-            {
-                Console.WriteLine("Greška. Poruka: {0}", ex.ToString());
+                prosjek = (double)suma / 5;
+                Console.Write("Suma = {0} \nProsjek = {1}", suma, prosjek);
             }
             catch (PrirodanBrojException ex)
             {
-                Console.WriteLine("Greška. Poruka: {0}", ex.ToString());
+                Console.WriteLine("Greška. Poruka: " + ex.ToString());
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Greška. Poruka: " + ex.ToString());
             }
             catch (Exception e)
             {
                 Console.WriteLine("Greška. Poruka: " + e.ToString());
             }
+
             finally
             {
                 Console.ReadLine();

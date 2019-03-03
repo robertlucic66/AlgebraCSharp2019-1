@@ -10,6 +10,8 @@ namespace _5._3._8.koliko
     {
         static void Main(string[] args)
         {
+            // 7-3 Koliko
+            // Napišite program koji ispisuje koliko ima brojeva djeljivih sa 7 i nedjeljivih s 3 u intervalu [1, 1000]
             int koliko = 0;
             for(int i = 1; i <= 1000; i++)
             {
