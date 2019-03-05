@@ -109,6 +109,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.2.2.zbirka_generics_parne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.2.3.zbirka.sort", "6.2.3.zbirka.sort\6.2.3.zbirka.sort.csproj", "{D9C79D20-13CE-453C-9634-681EA1E7CF8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.2.4.zbirka.znamenke", "6.2.4.zbirka.znamenke\6.2.4.zbirka.znamenke.csproj", "{62E843A4-D233-4AE1-9546-244E8F1ADF9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -303,6 +305,10 @@ Global
 		{D9C79D20-13CE-453C-9634-681EA1E7CF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9C79D20-13CE-453C-9634-681EA1E7CF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9C79D20-13CE-453C-9634-681EA1E7CF8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E843A4-D233-4AE1-9546-244E8F1ADF9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E843A4-D233-4AE1-9546-244E8F1ADF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E843A4-D233-4AE1-9546-244E8F1ADF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E843A4-D233-4AE1-9546-244E8F1ADF9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -353,6 +359,7 @@ Global
 		{FC8C56BE-9036-4573-BD1A-F7F70086472D} = {9C6F7C3F-227A-4390-8928-BED9C79D4744}
 		{58D473C7-5856-4BD6-B943-66A198EAD479} = {9C6F7C3F-227A-4390-8928-BED9C79D4744}
 		{D9C79D20-13CE-453C-9634-681EA1E7CF8D} = {9C6F7C3F-227A-4390-8928-BED9C79D4744}
+		{62E843A4-D233-4AE1-9546-244E8F1ADF9F} = {9C6F7C3F-227A-4390-8928-BED9C79D4744}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CEBD804E-2801-4E3C-B04B-5395F37855BF}
