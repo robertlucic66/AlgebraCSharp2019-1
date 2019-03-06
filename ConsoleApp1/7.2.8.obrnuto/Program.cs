@@ -4,26 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _7._2._3.ks_u_kw
+namespace _7._2._8.obrnuto
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Program pretvara KS u KW.
-
-            Console.Write("Unesite snagu u KS (konjske snage): ");
+            Console.Write("Unesite faktorijel: ");
             try
             {
-                double ks = double.Parse(Console.ReadLine());
-                if (ks <= 0)
+                int faktorijel = int.Parse(Console.ReadLine());
+                if (faktorijel <= 0)
                 {
-                    throw new PozitivanBrojException("UNESITE POZITIVAN BROJ!");
+                    throw new PrirodanBrojException("UNESITE PRIRODAN BROJ!");
                 }
 
-                Console.WriteLine("Snaga izražena u kilovatima je: " + KStoKW(ks));
+                Console.WriteLine("{0} = {1}!", faktorijel, Prirodan(faktorijel));
             }
-            catch (PozitivanBrojException pex)
+            catch (PrirodanBrojException pex)
             {
                 Console.WriteLine("Greška. Poruka: " + pex.ToString());
             }
@@ -38,29 +36,32 @@ namespace _7._2._3.ks_u_kw
             finally
             {
                 Console.ReadLine();
-            }
+            }   
         }
 
-        static double KStoKW(double ks)
+        static int Prirodan(int faktorijel)
         {
-            return ks * 0.736;
+  
+                return faktorijel / Prirodan(faktorijel -1);
+            
         }
     }
 }
 
-public class PozitivanBrojException : Exception
+
+
+public class PrirodanBrojException : Exception
 {
-    public PozitivanBrojException()
+    public PrirodanBrojException()
     {
     }
 
-    public PozitivanBrojException(string message) : base(message)
+    public PrirodanBrojException(string message) : base(message)
     {
     }
 
-    public PozitivanBrojException(string message, Exception innerException) : base(message, innerException)
+    public PrirodanBrojException(string message, Exception innerException) : base(message, innerException)
     {
     }
 }
-
 

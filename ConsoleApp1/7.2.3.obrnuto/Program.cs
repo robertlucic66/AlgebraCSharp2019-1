@@ -4,24 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _7._2._3.ks_u_kw
+namespace _7._2._3.obrnuto
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Program pretvara KS u KW.
-
-            Console.Write("Unesite snagu u KS (konjske snage): ");
+            Console.Write("Unesite snagu u kilovatima: ");
             try
             {
-                double ks = double.Parse(Console.ReadLine());
-                if (ks <= 0)
+                double kw = double.Parse(Console.ReadLine());
+                if (kw <= 0)
                 {
                     throw new PozitivanBrojException("UNESITE POZITIVAN BROJ!");
                 }
 
-                Console.WriteLine("Snaga izražena u kilovatima je: " + KStoKW(ks));
+                Console.WriteLine("Snaga izražena u KS je: " + KWtoKS(kw));
             }
             catch (PozitivanBrojException pex)
             {
@@ -38,12 +36,12 @@ namespace _7._2._3.ks_u_kw
             finally
             {
                 Console.ReadLine();
-            }
+            }         
         }
 
-        static double KStoKW(double ks)
+        static double KWtoKS(double kw)
         {
-            return ks * 0.736;
+            return kw / 0.736;
         }
     }
 }
@@ -62,5 +60,4 @@ public class PozitivanBrojException : Exception
     {
     }
 }
-
 

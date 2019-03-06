@@ -4,24 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _7._2._3.ks_u_kw
+namespace _7._2._2.obrnuto
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Program pretvara KS u KW.
+            // Program traži unos površine jednakokračnog trokuta i duljinu jedne katete.
+            // Zatim ispisuje duljinu druge katete.
 
-            Console.Write("Unesite snagu u KS (konjske snage): ");
+            Console.Write("Unesite površinu jednakokračnog trokuta: ");
             try
             {
-                double ks = double.Parse(Console.ReadLine());
-                if (ks <= 0)
+                double povrsina = double.Parse(Console.ReadLine());
+                Console.Write("Unesite duljinu prve katete: ");
+                double a = double.Parse(Console.ReadLine());
+                if (povrsina <= 0 || a <= 0)
                 {
-                    throw new PozitivanBrojException("UNESITE POZITIVAN BROJ!");
+                    throw new PozitivanBrojException("UNESITE POZITIVNE BROJEVE!");
                 }
 
-                Console.WriteLine("Snaga izražena u kilovatima je: " + KStoKW(ks));
+                Console.WriteLine("Duljina druge katete je {0}.", Kateta(a, povrsina));
             }
             catch (PozitivanBrojException pex)
             {
@@ -41,9 +44,9 @@ namespace _7._2._3.ks_u_kw
             }
         }
 
-        static double KStoKW(double ks)
+        static double Kateta(double a, double povrsina)
         {
-            return ks * 0.736;
+            return (2 * povrsina) / a;
         }
     }
 }
@@ -62,5 +65,4 @@ public class PozitivanBrojException : Exception
     {
     }
 }
-
 
