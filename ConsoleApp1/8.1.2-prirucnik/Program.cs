@@ -10,6 +10,33 @@ namespace _8._1._2_prirucnik
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Što je to nastavnik?");
+            Console.WriteLine(Nastavnik.Opis());
+            Console.WriteLine("Koji je koeficjent nastavnika?");
+            Console.WriteLine(Nastavnik.Koeficjent());
+
+            Nastavnik n1 = new Nastavnik();
+
+            // ne mozemo postaviti READ ONLY property
+            // n1.Ime = "Claudije";
+
+
+            // ispis može
+            Console.WriteLine("Njegovo ime je " + n1.Ime);
+
+            // OIB možemo postaviti 
+            n1.Oib = 12345;
+
+            // Ne dozvoljava čitanje oiba
+            // Console.WriteLine("Njegov OIB je " + n1.Oib);
+
+            // Ispiši dio oiba
+            Console.WriteLine("Njegov OIB je " + n1.PartialOib + "*******");
+
+
+
+
+
             // instanciraj novi objekt klase Ucenik
             Ucenik uc1 = new Ucenik();
 
@@ -24,6 +51,7 @@ namespace _8._1._2_prirucnik
             uc1.ocjenaIzBiologije = int.Parse(Console.ReadLine());
             Console.WriteLine("Unesi ocjenu iz engleskog");
             uc1.ocjenaIzEngleskog = int.Parse(Console.ReadLine());
+            uc1.
 
             Console.WriteLine("Prosjek je: " + uc1.Prosjek());
             

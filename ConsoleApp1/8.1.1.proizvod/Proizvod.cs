@@ -8,14 +8,14 @@ namespace _8._1._1.proizvod
 {
     class Proizvod
     {
-        public string Naziv = "";
+        public string naziv = "";
         public double Cijena = 0;
         public double Marza = 0;
         public double Porez = 0;
 
         public Proizvod(string naziv)
         {
-            Naziv = naziv;
+            this.naziv = naziv;
         }
 
         public double MPC()

@@ -3,7 +3,7 @@ namespace _8._1._2_prirucnik
 {
     internal class Ucenik
     {
-        public string ime = "";
+        private string ime = "";
         public DateTime datumNastanka;
         public string prezime = "";
         public int ocjenaIzMatematike = 0;

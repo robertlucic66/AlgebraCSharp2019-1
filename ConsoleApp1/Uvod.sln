@@ -161,7 +161,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.2.9.obrnuto", "7.2.9.obrn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8.1.2-prirucnik", "8.1.2-prirucnik\8.1.2-prirucnik.csproj", "{8FD5B45A-017D-4678-81AF-06AE40780C78}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8.1_Objekti", "8.1_Objekti", "{33364F0A-CCCA-46F2-885A-3B6846418674}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8.1_Svojstva_metode", "8.1_Svojstva_metode", "{33364F0A-CCCA-46F2-885A-3B6846418674}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8.1.1.proizvod", "8.1.1.proizvod\8.1.1.proizvod.csproj", "{691A2BB1-E19B-4CCF-A2A4-BB634AE7BAAF}"
 EndProject
