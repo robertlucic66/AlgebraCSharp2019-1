@@ -9,7 +9,6 @@ namespace _8._1._2_prirucnik
         public int ocjenaIzMatematike = 0;
         public int ocjenaIzEngleskog = 0;
         public int ocjenaIzBiologije = 0;
-        private string v;
 
         public Ucenik()
         {
@@ -18,7 +17,7 @@ namespace _8._1._2_prirucnik
 
         public Ucenik(string v)
         {
-            this.v = v;
+            this.ime = v;
         }
 
         public Ucenik(string v, string prez)
@@ -30,7 +29,7 @@ namespace _8._1._2_prirucnik
         internal double Prosjek()
         {
             double prosjek = 0;
-            prosjek = (ocjenaIzBiologije+ ocjenaIzEngleskog + ocjenaIzMatematike) / 3;
+            prosjek = (double)(ocjenaIzBiologije+ ocjenaIzEngleskog + ocjenaIzMatematike) / 3;
 
             return prosjek;
 
@@ -38,7 +37,7 @@ namespace _8._1._2_prirucnik
         }
         public override string ToString()
         {
-            return "Moje ime je " + this.ime + " a moj prosjek je: " + this.Prosjek();
+            return "Moje ime je " + this.ime + ", a moj prosjek je: " + this.Prosjek();
         }
     }
 }

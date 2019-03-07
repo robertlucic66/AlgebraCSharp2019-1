@@ -33,6 +33,7 @@ namespace _8._1._2_prirucnik
 
             Console.WriteLine("Ime učenika je: "+ uc1.ime+" i "+uc2.ime);
 
+            //List<Ucenik> ucenici = new List<Ucenik>();  // moze i ovako
             List<Ucenik> ucenici = new List<Ucenik> { uc1, uc2 };
             ucenici.Add(uc1);
             ucenici.Add(uc2);
@@ -42,9 +43,7 @@ namespace _8._1._2_prirucnik
                 Console.WriteLine(item);
             }
 
-
             Console.ReadKey();
-
         }
     }
 }
