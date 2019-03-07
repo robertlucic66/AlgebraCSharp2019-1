@@ -27,5 +27,9 @@ namespace _8._1._2_prirucnik
         {
             return 1.5f;
         }
+        public override string ToString()
+        {
+            return "Moje ime je " + this.Ime + " a moj oib je: " + this.PartialOib + "******";
+        }
     }
 }
