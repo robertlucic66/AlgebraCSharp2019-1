@@ -12,66 +12,76 @@ namespace _8._1._2_prirucnik
         {
             Console.WriteLine("Što je to nastavnik?");
             Console.WriteLine(Nastavnik.Opis());
-            Console.WriteLine("Koji je koeficjent nastavnika?");
+            Console.WriteLine("Koji je koeficijent nastvnika?");
             Console.WriteLine(Nastavnik.Koeficjent());
 
             Nastavnik n1 = new Nastavnik();
-
             // ne mozemo postaviti READ ONLY property
             // n1.Ime = "Claudije";
-
 
             // ispis može
             Console.WriteLine("Njegovo ime je " + n1.Ime);
 
-            // OIB možemo postaviti 
-            n1.Oib = 12345;
+            // OIB možemo postaviti
+            n1.Oib = 123345;
+
+            Nastavnik.Koeficjent();
 
             // Ne dozvoljava čitanje oiba
-            // Console.WriteLine("Njegov OIB je " + n1.Oib);
+            //Console.WriteLine("Njegov OIB je " + n1.Oib);
 
             // Ispiši dio oiba
-            Console.WriteLine("Njegov OIB je " + n1.PartialOib + "*******");
-
-
-
-
+            Console.WriteLine("Njegov OIB je " + n1.PartialOib + "*********");
 
             // instanciraj novi objekt klase Ucenik
             Ucenik uc1 = new Ucenik();
 
+
+
+
             // inicijalizacija objekta
-            Console.WriteLine("Unesi ime učenika");
+            Console.WriteLine("Unesi ime učenika:");
             uc1.ime = Console.ReadLine();
-            Console.WriteLine("Unesi prezime učenika: ");
+
+            Console.WriteLine("Unesi prezime učenika:");
             uc1.prezime = Console.ReadLine();
-            Console.WriteLine("Unesi ocjenu iz matematike");
+
+            Console.WriteLine("Unesi ocjenu iz matematike:");
             uc1.ocjenaIzMatematike = int.Parse(Console.ReadLine());
-            Console.WriteLine("Unesi ocjenu iz biologije");
+
+            Console.WriteLine("Unesi ocjenu iz biologije:");
             uc1.ocjenaIzBiologije = int.Parse(Console.ReadLine());
-            Console.WriteLine("Unesi ocjenu iz engleskog");
+
+            Console.WriteLine("Unesi ocjenu iz engleskog:");
             uc1.ocjenaIzEngleskog = int.Parse(Console.ReadLine());
-            uc1.
+
 
             Console.WriteLine("Prosjek je: " + uc1.Prosjek());
-            
-            
+
+
+
             // instanciraj novi objekt klase Ucenik
-            Ucenik uc2 = new Ucenik("Perica");
+            Ucenik uc2 = new Ucenik("perica");
+            /*
+             * 
+             * 
+             * 
+             * */
 
-            Console.WriteLine("Ime učenika je: "+ uc1.ime+" i "+uc2.ime);
+            Console.WriteLine("Ime ucenika je " + uc1.Ime + " i " + uc2.Ime);
 
-            //List<Ucenik> ucenici = new List<Ucenik>();  // moze i ovako
+            // List<Ucenik> ucenici = new List<Ucenik>();  // moze i ovako
             List<Ucenik> ucenici = new List<Ucenik> { uc1, uc2 };
             ucenici.Add(uc1);
             ucenici.Add(uc2);
-            //enici.Add()
+
+            //ucenici.Add({ uc1,uc2});
             foreach (var item in ucenici)
             {
                 Console.WriteLine(item);
             }
 
-            Console.WriteLine("\nNastavnici");
+            Console.WriteLine("\nNastavnici:");
 
             List<Nastavnik> nastavnici = new List<Nastavnik>();
             nastavnici.Add(n1);
@@ -79,6 +89,9 @@ namespace _8._1._2_prirucnik
             {
                 Console.WriteLine(item);
             }
+
+
+
 
             Console.ReadKey();
         }
