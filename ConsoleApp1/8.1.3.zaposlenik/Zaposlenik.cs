@@ -100,6 +100,8 @@ namespace _8._1._3.zaposlenik
             return this.NetoIzracunPlace() + this.Porez;
         }
 
+
+
         public Zaposlenik()
         {
 

@@ -11,6 +11,19 @@ namespace _8._1._3.zaposlenik
         static void Main(string[] args)
         {
             Zaposlenik zaposlenik1 = new Zaposlenik("Pero", "Peric", "92358367485");
+            Zaposlenik zaposlenik2 = new Zaposlenik("Josip", "Josipovic");
+
+
+
+            List<Zaposlenik> listaZaposlenika = new List<Zaposlenik>();
+            listaZaposlenika.Add(zaposlenik1);
+            listaZaposlenika.Add(zaposlenik2);
+
+            listaZaposlenika.ForEach(UnesiBodove(Zaposlenik))
+            {
+
+            }
+
 
             bool ispravanUnos = false;
             while (!ispravanUnos)
