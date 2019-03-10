@@ -4,54 +4,93 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _8._1._3.zaposlenik
+namespace _8._1._3_zaposlenik
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Zaposlenik zaposlenik1 = new Zaposlenik("Pero", "Peric", "92358367485");
-            Zaposlenik zaposlenik2 = new Zaposlenik("Josip", "Josipovic");
+            // Prvi način
+            // Novi objekt Zaposlenik
+            // Zaposlenik Z1 = new Zaposlenik("Josip", "Josipovic", "8788593686856");
+            // Zaposlenik Z2 = new Zaposlenik("Luka", "Lukovsipovic");
 
+            // List<Zaposlenik> listaZaposlenika = new List<Zaposlenik>();
+            // listaZaposlenika.Add(Z1);
+            // listaZaposlenika.Add(Z2);
 
-
-            List<Zaposlenik> listaZaposlenika = new List<Zaposlenik>();
-            listaZaposlenika.Add(zaposlenik1);
-            listaZaposlenika.Add(zaposlenik2);
-
-            listaZaposlenika.ForEach(UnesiBodove(Zaposlenik))
+            // drugi način
+            List<Zaposlenik> listaZaposlenika = new List<Zaposlenik>
             {
+                 new Zaposlenik("Josip", "Josipovic", "8788593686856"),
+                 new Zaposlenik("Luka", "Lukovsipovic")
+            };
 
+
+            listaZaposlenika.ForEach(Zaposlenik => UnesiBodove(Zaposlenik));
+            listaZaposlenika.ForEach(Zaposlenik => UnesiVrijednostBoda(Zaposlenik));
+            listaZaposlenika.ForEach(Zaposlenik => IspisiZaposlenike(Zaposlenik));
+
+
+            Console.ReadKey();
+        }
+
+        private static void IspisiZaposlenike(Zaposlenik zaposlenik)
+        {
+            // ispis
+            Console.WriteLine("Zaposlenik:" + zaposlenik.Ime + "" + zaposlenik.Prezime);
+            Console.WriteLine("Neto:" + zaposlenik.NetoIzracunPlace());
+            Console.WriteLine("Porez:" + zaposlenik.Porez);
+            Console.WriteLine("Bruto" + zaposlenik.BrutoIzracunPlace());
+        }
+
+        private static void UnesiVrijednostBoda(Zaposlenik zaposlenik)
+        {
+            bool provjeraUnosa = false;
+            while (!provjeraUnosa)
+            {
+                Console.Write("Unesite vrijednost boda:");
+                try
+                {
+                    zaposlenik.VrijednostBoda = double.Parse(Console.ReadLine());
+                    provjeraUnosa = true;
+                }
+
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("Greška" + ex.Message);
+                }
+
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Greška" + ex.Message);
+                }
             }
+        }
 
-
-            bool ispravanUnos = false;
-            while (!ispravanUnos)
+        private static void UnesiBodove(Zaposlenik zaposlenik)
+        {
+            // Korisnik mora ispravno uneti broj bodova
+            bool provjeraUnosa = false;
+            while (!provjeraUnosa)
             {
-                Console.WriteLine("Unesite broj bodova: ");
+                Console.Write("Unesite broj bodova");
 
                 try
                 {
-                    zaposlenik1.BrojBodova = double.Parse(Console.ReadLine());
-                    ispravanUnos = true;
+                    zaposlenik.BrojBodova = double.Parse(Console.ReadLine());
+                    provjeraUnosa = true;
                 }
-                catch (FormatException fex)
+
+                catch (FormatException ex) // specijalne greške
                 {
-                    Console.WriteLine("Greška. Poruka: " + fex.ToString());
+                    Console.WriteLine("Greška:" + ex.Message);
                 }
-                catch (Exception ex)
+                catch (Exception ex)// ostale greške
                 {
-                    Console.WriteLine("Greška. Poruka: " + ex.ToString());
+                    Console.WriteLine("Greška" + ex.Message);
                 }
             }
-
-            // Ispis
-            Console.WriteLine("Zaposlenik: " + zaposlenik1.Ime + " " + zaposlenik1.Prezime);
-            Console.WriteLine("Neto: " + zaposlenik1.NetoIzracunPlace());
-            Console.WriteLine("Porez: " + zaposlenik1.Porez);
-            Console.WriteLine("Bruto: " + zaposlenik1.BrutoIzracunPlace());
-
-            Console.ReadKey();
         }
     }
 }

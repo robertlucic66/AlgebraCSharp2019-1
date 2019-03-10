@@ -1,38 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _8._1._3.zaposlenik
+namespace _8._1._3_zaposlenik
 {
-    class Zaposlenik
+    internal class Zaposlenik
     {
+        #region Svojstva
 
-        // Svojstva
-
-        public string ime;
+        private string ime;
         public string Ime
         {
             get { return ime; }
             set { ime = value; }
         }
-
-        public string prezime;
+        private string prezime;
         public string Prezime
         {
             get { return prezime; }
             set { prezime = value; }
         }
-
-        public string jmbg = "";
-        public string JMBG
+        private string oib;
+        public string OIB
         {
-            get { return jmbg; }
-            set { jmbg = value; }
+
+            get { return oib; }
+            set { prezime = value; }
         }
 
-        public double brojBodova;
+        private double brojBodova;
         public double BrojBodova
         {
             get { return brojBodova; }
@@ -42,19 +36,21 @@ namespace _8._1._3.zaposlenik
                 {
                     brojBodova = value;
                 }
+
                 else
                 {
-                    Exception ex = new Exception("Morate unijeti pozitivnu brojčanu vrijednost!");
+                    Exception ex = new Exception("Mozete uneti samo pozitivan broj");
                     throw ex;
                 }
             }
         }
 
-        public double vrijednostBoda;
+        double vrijednostBoda;
         public double VrijednostBoda
         {
             get { return vrijednostBoda; }
             set
+
             {
                 if (value > 0)
                 {
@@ -62,13 +58,13 @@ namespace _8._1._3.zaposlenik
                 }
                 else
                 {
-                    Exception ex = new Exception("Morate unijeti pozitivnu brojčanu vrijednost!");
+                    Exception ex = new Exception("Mozete uneti samo pozitivan broj");
                     throw ex;
                 }
             }
         }
 
-        // ReadOnly
+        // ReadOnly svojstvo
         public double Porez
         {
             get
@@ -77,7 +73,9 @@ namespace _8._1._3.zaposlenik
                 if (neto < 3000)
                 {
                     return neto * 0.06;
-                }else if (neto < 6000)
+                }
+
+                else if (neto < 6000)
                 {
                     return neto * 0.12;
                 }
@@ -88,37 +86,45 @@ namespace _8._1._3.zaposlenik
             }
         }
 
-        // Metode
 
+
+        #endregion
+
+        #region  metode
         public double NetoIzracunPlace()
         {
-            return this.BrojBodova + this.VrijednostBoda;
+            return this.BrojBodova * this.VrijednostBoda;
         }
-
         public double BrutoIzracunPlace()
         {
             return this.NetoIzracunPlace() + this.Porez;
         }
 
+        #endregion
 
+        #region Konstruktori
 
-        public Zaposlenik()
-        {
-
-        }
+        public Zaposlenik() { }
 
         public Zaposlenik(string ime, string prezime)
         {
+
             this.Ime = ime;
             this.Prezime = prezime;
         }
 
-        public Zaposlenik(string ime, string prezime, string jmbg)
+        public Zaposlenik(string ime, string prezime, string oib)
+            : this(ime, prezime)
         {
-            this.Ime = ime;
-            this.Prezime = prezime;
-            this.JMBG = jmbg;
+            // this.Ime = ime;
+            // this.Prezime = prezime;
+            this.OIB = oib;
         }
-
+        public Zaposlenik(string ime, string prezime, string oib, double brojbodova)
+            : this(ime, prezime, oib)
+        {
+            this.BrojBodova = brojbodova;
+        }
+        #endregion
     }
 }
