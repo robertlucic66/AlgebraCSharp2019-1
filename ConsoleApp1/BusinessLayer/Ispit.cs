@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer
+namespace _8._3._1.prirucnik
+{
     class Ispit
     {
         private string naziv = "Matematika";

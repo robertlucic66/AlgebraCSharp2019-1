@@ -1,5 +1,6 @@
 ﻿using System;
-namespace BusinessLayer
+namespace _8._3._1.prirucnik
+{
     internal class Ucenik : Osoba, IUcenik
 
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using _8._1._2.automobil;
 
-namespace _8._3._1.prirucnik
+namespace BusinessLayer
 {
     class Vozac : Osoba
     {

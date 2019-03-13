@@ -5,10 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BusinessLayer
-    internal interface IUcenik
+{
+    public class Class1
     {
-        double Prosjek();
-        string ToString();
-        void PrijaviIspit(Ispit ispit);
     }
 }

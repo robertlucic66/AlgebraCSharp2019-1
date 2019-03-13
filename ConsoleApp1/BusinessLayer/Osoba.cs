@@ -1,7 +1,7 @@
 ﻿using System;
-// using _8._1._2_prirucnik;
+using _8._1._2_prirucnik;
 
-namespace BusinessLayer
+namespace _8._3._1.prirucnik
 {
     public abstract class Osoba
     {
