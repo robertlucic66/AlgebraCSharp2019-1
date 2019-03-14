@@ -42,7 +42,12 @@ namespace _10._1._2.prirucnik
             string[] sFiles = Directory.GetFiles(@"C:\");
             foreach (string sFile in sFiles)
             {
+                Console.WriteLine("\nsPath.getfilename: ");
                 Console.WriteLine(Path.GetFileName(sFile));
+                Console.WriteLine("\nsPath.getextension");
+                Console.WriteLine(Path.GetExtension(sFile));
+                Console.WriteLine("\nsPath.getextension");
+                Console.WriteLine(File.GetCreationTime(sFile));
             }
 
             Console.ReadKey();
