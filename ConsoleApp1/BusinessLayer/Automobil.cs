@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BusinessLayer
+﻿namespace BusinessLayer
 {
-    class Automobil
+    public class Automobil
     {
+        // Polja
         public string MarkaAutomobila = "";
         public double KS = 0;
         public double OsnovnaCijena = 0;
 
+        // Metode
         public double IznosPoreza()
         {
             double postotak = 0;
@@ -19,22 +15,21 @@ namespace BusinessLayer
             if (KS < 50)
             {
                 postotak = 0.05;
-            }else if(KS < 150)
+            }
+            else if (KS < 150)
             {
                 postotak = 0.1;
-            }else
+            }
+            else
             {
                 postotak = 0.15;
             }
 
             return OsnovnaCijena * postotak;
         }
-
         public double UkupnaCijena()
         {
             return OsnovnaCijena + IznosPoreza();
         }
-
-
     }
 }

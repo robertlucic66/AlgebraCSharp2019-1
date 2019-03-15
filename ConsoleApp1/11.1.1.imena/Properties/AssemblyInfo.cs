@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("11.2.linq")]
+[assembly: AssemblyTitle("11.1.1.imena")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("11.2.linq")]
+[assembly: AssemblyProduct("11.1.1.imena")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("504a125a-7c27-48ed-a2b5-1344dc380f6d")]
+[assembly: Guid("33a35ca6-c8b5-460b-9055-be54fd38ca17")]
 
 // Version information for an assembly consists of the following four values:
 //

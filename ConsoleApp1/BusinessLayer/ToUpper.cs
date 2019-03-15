@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _8._1._2_prirucnik
+namespace BusinessLayer
 {
     public static class ToUpper
     {
         public static string FirstCharToUpper(this string input)
         {
-            switch(input)
+            switch (input)
             {
                 case null: throw new ArgumentNullException(nameof(input));
                 case "": throw new ArgumentException($"{nameof(input)} cannot be empty", nameof(input));
