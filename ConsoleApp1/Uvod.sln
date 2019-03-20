@@ -225,6 +225,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "13.1_Enum", "13.1_Enum", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.1.enumeracije", "13.1.enumeracije\13.1.enumeracije.csproj", "{BC8DCD48-78C0-4F60-8ADB-DC9ACF9BFCB1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14.1.ponavljanje", "14.1.ponavljanje", "{24439F81-F5D5-4954-A1DF-F957F9A5F298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.1.ponavljanje_racun", "14.1.ponavljanje_racun\14.1.ponavljanje_racun.csproj", "{33995B3B-D962-4897-99F1-C9E160A97CD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -599,6 +603,10 @@ Global
 		{BC8DCD48-78C0-4F60-8ADB-DC9ACF9BFCB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC8DCD48-78C0-4F60-8ADB-DC9ACF9BFCB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC8DCD48-78C0-4F60-8ADB-DC9ACF9BFCB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33995B3B-D962-4897-99F1-C9E160A97CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33995B3B-D962-4897-99F1-C9E160A97CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33995B3B-D962-4897-99F1-C9E160A97CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33995B3B-D962-4897-99F1-C9E160A97CD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -694,6 +702,7 @@ Global
 		{33A35CA6-C8B5-460B-9055-BE54FD38CA17} = {05581252-CF35-4F3A-B9FD-B1E69165D303}
 		{F0B4B405-C470-448B-80C5-C60B9BC15573} = {DD1CC97C-DDEA-4E4B-8460-5CAE141C67AB}
 		{BC8DCD48-78C0-4F60-8ADB-DC9ACF9BFCB1} = {B58F2808-78E4-4C6B-A729-FC9E4C04E7CB}
+		{33995B3B-D962-4897-99F1-C9E160A97CD8} = {24439F81-F5D5-4954-A1DF-F957F9A5F298}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CEBD804E-2801-4E3C-B04B-5395F37855BF}
